@@ -558,7 +558,7 @@ class CreditsScreen extends MenuScreen {
       }
     } catch (e) { }
     if (T['postcredits.txt']) for (const raw of T['postcredits.txt'].split('\n')) for (const w of this.wrap(raw.replace(/§./g, ''), 274)) lines.push({ t: w, col: '#FFFFFF', center: true });
-    lines.push({ t: '' }, { t: '本作品为非官方复刻 · 感谢游玩！', col: '#FFFF55', center: true });
+    lines.push({ t: '' }, { t: '仅供非商业学习交流 · 感谢游玩！', col: '#FFFF55', center: true });
     this.lines = lines;
   }
   wrap(s, maxW) {
