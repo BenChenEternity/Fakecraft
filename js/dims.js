@@ -558,7 +558,15 @@ class CreditsScreen extends MenuScreen {
       }
     } catch (e) { }
     if (T['postcredits.txt']) for (const raw of T['postcredits.txt'].split('\n')) for (const w of this.wrap(raw.replace(/§./g, ''), 274)) lines.push({ t: w, col: '#FFFFFF', center: true });
-    lines.push({ t: '' }, { t: '仅供非商业学习交流 · 感谢游玩！', col: '#FFFF55', center: true });
+    lines.push(
+      { t: '' },
+      { t: 'Fakecraft', col: '#FFFF55', center: true },
+      { t: '基于 B 站版 OpusMC 修改', center: true },
+      { t: '原作发布：土豆味小哲', center: true },
+      { t: '策划：有问题的红河', center: true },
+      { t: '仅供非商业学习交流', center: true },
+      { t: '按现状提供，不保证稳定性或兼容性', center: true }
+    );
     this.lines = lines;
   }
   wrap(s, maxW) {

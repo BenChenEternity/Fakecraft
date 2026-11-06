@@ -458,7 +458,7 @@ class PhotoScreen extends MenuScreen {
   }
   data() { return this.cv.toDataURL('image/jpeg', 0.88); }
   async save() {
-    const a = document.createElement('a'); a.href = this.data(); a.download = 'OpusMC-' + Date.now() + '.jpg'; a.click(); this.note = '已下载';
+    const a = document.createElement('a'); a.href = this.data(); a.download = 'Fakecraft-' + Date.now() + '.jpg'; a.click(); this.note = '已下载';
   }
   drawExtra(ui) {
     const c = ui.ctx, W = ui.w - 40, H = Math.min(ui.h - 50, W * this.cv.height / this.cv.width), w = H * this.cv.width / this.cv.height;

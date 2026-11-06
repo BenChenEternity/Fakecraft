@@ -561,7 +561,7 @@ class LocalRoomStatusScreen extends MenuScreen {
     if (H) {
       [...H.peers.values()].filter((p) => p.joined).forEach((p, i) => this.widgets.push({ x: cx + 80, y: 66 + i * 22, w: 60, h: 18, label: '请离开', onClick: () => { H.kick(p.id); setTimeout(() => this.layout(), 400); } }));
       this.widgets.push(
-        { x: cx - 152, y: 30, w: 98, h: 20, gold: true, label: '复制邀请', onClick: async () => { this.note = (await copyText(`来我的 OpusMC 本地房间玩：多人游戏 → 输入邀请码 ${H.code}`)) ? '已复制，发给朋友吧' : '复制失败：邀请码 ' + H.code; } },
+        { x: cx - 152, y: 30, w: 98, h: 20, gold: true, label: '复制邀请', onClick: async () => { this.note = (await copyText(`来我的 Fakecraft 本地房间玩：多人游戏 → 输入邀请码 ${H.code}`)) ? '已复制，发给朋友吧' : '复制失败：邀请码 ' + H.code; } },
         { x: cx - 50, y: 30, w: 98, h: 20, label: '复制邀请码', onClick: async () => { this.note = (await copyText(H.code)) ? '邀请码已复制' : '复制失败'; } },
         { x: cx + 52, y: 30, w: 100, h: 20, label: '关闭房间', onClick: () => { H.close(); this.game.ui.message('本地房间已关闭', '#AAAAAA'); this.game.ui.open(this.parent); } },
       );
